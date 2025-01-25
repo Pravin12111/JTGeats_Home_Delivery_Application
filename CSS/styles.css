@@ -1,0 +1,119 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #00a651;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+.navbar .nav-icons i {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #00a651;
+    color: white;
+    padding: 2rem 1rem;
+}
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    margin-bottom: 2rem;
+}
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+}
+.search-bar input {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+.search-bar button {
+    background-color: #ffc107;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+/* Hero Image */
+.hero-image img {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image img {
+        margin-top: 2rem;
+    }
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
