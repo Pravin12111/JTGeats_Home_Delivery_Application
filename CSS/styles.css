@@ -211,6 +211,133 @@ body {
 }
 
 
+/* Popular Items Section */
+.popular-items-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Carousel Styling */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  width: 277px;
+  height: 337px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+  width: 277px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.item-details {
+  padding: 10px;
+  text-align: left;
+}
+
+.item-details h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.item-details p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.carousel-btn img {
+  width: 66px;
+  height: 66px;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Request Button */
+.request-dish-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.request-dish-btn:hover {
+  background-color: #218838;
+}
+
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero .container {
@@ -226,5 +353,19 @@ body {
   .navbar .nav-links {
       flex-direction: column;
       align-items: center;
+  }
+
+  .carousel-item {
+    flex: 0 0 80%;
+  }
+
+  .carousel-btn {
+    height: 30px;
+    width: 30px;
+  }
+
+  .request-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
   }
 }
