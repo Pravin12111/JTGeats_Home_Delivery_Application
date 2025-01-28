@@ -27,11 +27,23 @@
                   <img src="Assets/nav/akar-icons_search.png" alt="Search" />
                 </button>
                 <!-- Add to Cart Button -->
-                <button class="cart-button">
+                <button class="cart-button" id="cart-icon">
                   <img src="Assets/nav/akar-icons_shopping-bag.png" alt="Cart" />
                 </button>
               </div>
         </div>
+
+        <div id="cart-modal" class="modal hidden">
+          <div class="modal-content">
+            <h2>Your Cart</h2>
+            <img src="Assets/nav/akar-icons_shopping-bag.png" alt="add to cart">
+            <ul id="cart-items">
+              <li>No items in the cart</li>
+            </ul>
+            <button id="close-modal">Back to Menu</button>
+          </div>
+        </div>
+        
     </header>
 
     <!-- Hero Section -->
@@ -276,6 +288,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="carousel-item">
                 <img src="Assets/kitchen/popular/img2.png" alt="Tandoori Chicken">
                 <div class="item-details">
@@ -287,6 +300,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="carousel-item">
                 <img src="Assets/kitchen/popular/img3.png" alt="Chilli Chicken">
                 <div class="item-details">
@@ -326,6 +340,7 @@
               Away from home and craving the tasty homemade recipes?<br>
               Choose from a selection of our delicious home cooked dishes
             </p>
+            <!--Need To be Change-->>
             <div class="feature-video-container">
               <img src="Assets/services/pexels-pixabay-357737 1.png" alt="Delicious Home Cooked Food" class="feature-image">
               <button class="feature-play-button">

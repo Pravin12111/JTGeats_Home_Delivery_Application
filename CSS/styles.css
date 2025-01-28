@@ -58,6 +58,66 @@ body {
   filter: brightness(1.5); /* Brightness effect on hover */
 }
 
+
+/* Modal Styles */
+/* Cart Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#cart-items li {
+  font-size: 18px;
+}
+
+#close-modal {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1AC073;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+
+
 /* Hero Section Styles */
 .hero {
   background-color: #00a651;
@@ -229,9 +289,11 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .carousel-container {
@@ -243,9 +305,12 @@ body {
 .carousel-item {
   width: 277px;
   height: 337px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  margin: 0;
   border: 1px solid #ddd;
   border-radius: 10px;
+  opacity: 1;
+  position: relative;
   overflow: hidden;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -261,12 +326,16 @@ body {
   width: 277px;
   height: 250px;
   object-fit: cover;
+  opacity: 1;
   border-radius: 10px 10px 0 0;
 }
 
 .item-details {
-  padding: 10px;
+  width: 277px;
+  height: 87px;
+  padding: 20px 24px;
   text-align: left;
+  position: absolute;
 }
 
 .item-details h3 {

@@ -2,9 +2,9 @@ const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-const itemsToShow = 3; // Number of items visible at a time
+const itemsToShow = 3;
 const totalItems = document.querySelectorAll('.carousel-item').length;
-const itemWidth = 297; // Width of each item including gap
+const itemWidth = 277;
 let currentIndex = 0;
 
 // Scroll the carousel
@@ -28,3 +28,24 @@ prevBtn.addEventListener('click', () => {
     updateCarousel();
   }
 });
+
+
+//add to cart modal implementation
+
+// Get elements
+const cartIcon = document.getElementById("cart-icon");
+const cartModal = document.getElementById("cart-modal");
+const closeModalButton = document.getElementById("close-modal");
+
+// Open modal when cart icon is clicked
+cartIcon.addEventListener("click", () => {
+  cartModal.classList.remove("hidden");
+  cartModal.style.display = "flex";
+});
+
+// Close modal when "Back to Menu" button is clicked
+closeModalButton.addEventListener("click", () => {
+  cartModal.classList.add("hidden");
+  cartModal.style.display = "none";
+});
+
