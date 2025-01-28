@@ -1,3 +1,4 @@
+// Carousel Implementation
 const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
@@ -29,40 +30,38 @@ prevBtn.addEventListener('click', () => {
   }
 });
 
-
-//add to cart modal implementation
+// Add to Cart Modal Implementation
 const cartIcon = document.getElementById("cart-icon");
 const cartModal = document.getElementById("cart-modal");
 const closeModalButton = document.getElementById("close-modal");
 
-
 cartIcon.addEventListener("click", () => {
   cartModal.classList.remove("hidden");
   cartModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
 });
-
 
 closeModalButton.addEventListener("click", () => {
   cartModal.classList.add("hidden");
   cartModal.style.display = "none";
+  document.body.style.overflow = "auto";
 });
 
-
-//Request a dish
+// Request a Dish Modal Implementation
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("requestModal");
   const openModalBtn = document.getElementById("openModalBtn");
   const cancelBtn = document.getElementById("cancelBtn");
   const submitBtn = document.getElementById("submitBtn");
 
-  
   openModalBtn.addEventListener("click", function () {
       modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
   });
 
-  
   function closeModal() {
       modal.style.display = "none";
+      document.body.style.overflow = "auto";
   }
 
   cancelBtn.addEventListener("click", closeModal);
@@ -76,3 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Video Play/Pause Functionality
+const video = document.getElementById('video');
+
+video.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    video.setAttribute('controls', true);
+  } else {
+    video.pause();
+    video.removeAttribute('controls');
+  }
+});

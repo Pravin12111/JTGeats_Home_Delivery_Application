@@ -720,4 +720,30 @@ form {
     font-size: 0.9rem;
     padding: 0.6rem 1.5rem;
   }
+
+
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+  .search-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .search-bar button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
 }
