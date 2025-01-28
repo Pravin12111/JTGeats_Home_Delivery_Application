@@ -192,6 +192,19 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
+
+.home-kitchen-badge {
+  position: absolute;
+  width: Fixed (32px)px;
+  height: Hug (30px)px;
+  background-color: #F3BA00;
+  padding: 0px 4px 0px 4px;
+  gap: 4px;
+  border-radius: 10px 5px 5px 5px;
+  opacity: 0px;
+
+}
+
 #home-kitchen .home-kitchen-card:hover {
   transform: scale(1.05);
 }
@@ -360,8 +373,6 @@ body {
 .carousel-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -370,7 +381,6 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -401,6 +411,64 @@ body {
 
 .request-dish-btn:hover {
   background-color: #218838;
+}
+
+
+/*Modal*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-btn, .submit-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #008037;
+  color: #008037;
+}
+
+.submit-btn {
+  background: #008037;
+  color: white;
 }
 
 /* Feature Section Styling */

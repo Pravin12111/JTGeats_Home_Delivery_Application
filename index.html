@@ -274,7 +274,7 @@
           <h2 class="section-title">Popular Items</h2>
           <div class="carousel">
             <button class="carousel-btn prev-btn">
-              <img src="Assets/services/Arrow.png" alt="Previous">
+              <img src="Assets/kitchen/Arrow (1).png" alt="Previous">
             </button>
             <div class="carousel-container">
               <div class="carousel-item">
@@ -326,11 +326,32 @@
               </div>
             </div>
             <button class="carousel-btn next-btn">
-              <img src="Assets/services/Arrow.png" alt="Next">
+              <img src="Assets/kitchen/Arrow (1).png" alt="Next">
             </button>
           </div>
-          <button class="request-dish-btn">Request a Dish</button>
+          <button id="openModalBtn" class="request-dish-btn">Request a Dish</button>
+
+          <!-- Modal -->
+    <div id="requestModal" class="modal">
+      <div class="modal-content">
+          <h2>Request a Dish</h2>
+          <label for="dish-name">Dish Name*</label>
+          <input type="text" id="dish-name" placeholder="Enter dish name">
+          
+          <label for="dish-image">Upload Image</label>
+          <input type="text" id="dish-image" placeholder="Paste image URL">
+
+          <div class="modal-buttons">
+              <button id="cancelBtn" class="cancel-btn">Cancel</button>
+              <button id="submitBtn" class="submit-btn">Submit Request</button>
+          </div>
+      </div>
+  </div>
+
         </section>
+
+
+
 
 
         <section class="feature-section">

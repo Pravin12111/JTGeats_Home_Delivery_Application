@@ -31,21 +31,48 @@ prevBtn.addEventListener('click', () => {
 
 
 //add to cart modal implementation
-
-// Get elements
 const cartIcon = document.getElementById("cart-icon");
 const cartModal = document.getElementById("cart-modal");
 const closeModalButton = document.getElementById("close-modal");
 
-// Open modal when cart icon is clicked
+
 cartIcon.addEventListener("click", () => {
   cartModal.classList.remove("hidden");
   cartModal.style.display = "flex";
 });
 
-// Close modal when "Back to Menu" button is clicked
+
 closeModalButton.addEventListener("click", () => {
   cartModal.classList.add("hidden");
   cartModal.style.display = "none";
+});
+
+
+//Request a dish
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("requestModal");
+  const openModalBtn = document.getElementById("openModalBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
+  const submitBtn = document.getElementById("submitBtn");
+
+  
+  openModalBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
+  });
+
+  
+  function closeModal() {
+      modal.style.display = "none";
+  }
+
+  cancelBtn.addEventListener("click", closeModal);
+  submitBtn.addEventListener("click", closeModal);
+
+  // Close modal when clicking outside content
+  window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+          closeModal();
+      }
+  });
 });
 
